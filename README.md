@@ -73,3 +73,7 @@ EOF
 6. Start the virtual machine. The system will boot directly into the customized **Live OS** environment.
 
 ![alt text](<Captura de pantalla 2026-06-21 152640.png>)
+
+#### END
+Finally we have the distro with free software apps
+![alt text](<Captura de pantalla 2026-06-21 154221.png>)
