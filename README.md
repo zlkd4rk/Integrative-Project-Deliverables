@@ -21,6 +21,47 @@ When we have cubic we need a directory where save the info.
 Also we use a distro like linux mint to clone the distro for own distro.
 ![alt text](<Captura de pantalla 2026-06-21 143919.png>)
 
+## Integrated Free Software (6-App Ecosystem)
+
+Proprietary, telemetry-heavy, or redundant default applications (such as Firefox, Thunderbird, and Totem) were purged and replaced with the following open-source alternatives:
+
+1. *LibreWolf:* A customizable web browser focused on privacy, security, and data protection by eliminating telemetry.
+2. *Audacious:* A lightweight, low-resource audio player engineered for high performance.
+3. *MPV:* A powerful, minimalist command-line-driven media player.
+4. *Neovim:* A vim-based text editor extensible via Lua, optimized for terminal development.
+5. *KeePassXC:* A secure, local, cross-platform password manager to safeguard user credentials.
+6. *Clementine:* A modern, feature-rich music player and library organizer for local media management.
+![alt text](<Captura de pantalla 2026-06-21 074611.png>)
+---
+
+## Commands that we use to install the apps
+##  Build Process & Package Management (Cubic CLI)
+
+The customization was executed entirely inside the Cubic virtual environment terminal (`chroot`). The following commands were used to purge default packages, configure external repositories, and install the new software ecosystem:
+
+###  Purging Default & Redundant Applications
+To free up space and remove proprietary or telemetry-heavy software, the default browser, mail client, and media players were completely purged:
+```bash
+apt purge -y firefox totem thunderbird rhythmbox
+apt autoremove -y
+
+## Add librewolf
+apt install -y extrepo && extrepo enable librewolf
+apt update
+## we use those diferrents apps to modify the distro
+apt install -y librewolf audacious mpv neovim keepassxc clementine
+## Alias to each app
+cat << 'EOF' >> /etc/skel/.bashrc
+
+# --- Lab: Free Software Ecosystem Shortcuts ---
+alias web='librewolf'
+alias musica='audacious'
+alias video='mpv'
+alias edit='nvim'
+alias ll='ls -la'
+alias llaves='keepassxc'
+alias biblioteca='clementine'
+EOF
 
 ##  Deployment Instructions in VirtualBox
 1. Create a new Virtual Machine, setting the Type to **Linux** and Version to **Ubuntu (64-bit)**.
