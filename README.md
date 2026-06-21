@@ -8,6 +8,12 @@ What is a cubic? Cubic is a aplication to create own distro with some free softw
 * **Filename:** `IAAdis-desktop-amd64.iso`
 * **Approximate Size:** ~6.04 GiB
 * **Base OS:** Ubuntu / Linux Mint (64-bit)
+## We need install cubic into our vm with ubuntu or anyone distribution
+Use the codes into the cubic repo
+![alt text](image.png)
+## Then we have the aplication into the virtual box
+![alt text](VirtualBox_UnixFinal_20_06_2026_16_23_50-1.png)
+---
 ##  Deployment Instructions in VirtualBox
 1. Create a new Virtual Machine, setting the Type to **Linux** and Version to **Ubuntu (64-bit)**.
 2. Allocate a minimum of **2 CPU Cores** and **4 GB of RAM**.
