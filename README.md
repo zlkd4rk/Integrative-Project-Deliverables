@@ -14,6 +14,14 @@ Use the codes into the cubic repo
 ## Then we have the aplication into the virtual box
 ![alt text](VirtualBox_UnixFinal_20_06_2026_16_23_50-1.png)
 ---
+## Set up cubic
+When we have cubic we need a directory where save the info.
+![alt text](<Captura de pantalla 2026-06-21 143935.png>)
+
+Also we use a distro like linux mint to clone the distro for own distro.
+![alt text](<Captura de pantalla 2026-06-21 143919.png>)
+
+
 ##  Deployment Instructions in VirtualBox
 1. Create a new Virtual Machine, setting the Type to **Linux** and Version to **Ubuntu (64-bit)**.
 2. Allocate a minimum of **2 CPU Cores** and **4 GB of RAM**.
