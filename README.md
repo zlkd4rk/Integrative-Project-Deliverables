@@ -38,10 +38,9 @@ Proprietary, telemetry-heavy, or redundant default applications (such as Firefox
 ##  Build Process & Package Management (Cubic CLI)
 
 The customization was executed entirely inside the Cubic virtual environment terminal (`chroot`). The following commands were used to purge default packages, configure external repositories, and install the new software ecosystem:
-
 ###  Purging Default & Redundant Applications
 To free up space and remove proprietary or telemetry-heavy software, the default browser, mail client, and media players were completely purged:
-```bash
+
 apt purge -y firefox totem thunderbird rhythmbox
 apt autoremove -y
 
@@ -54,6 +53,7 @@ apt install -y librewolf audacious mpv neovim keepassxc clementine
 cat << 'EOF' >> /etc/skel/.bashrc
 
 # --- Lab: Free Software Ecosystem Shortcuts ---
+
 alias web='librewolf'
 alias musica='audacious'
 alias video='mpv'
@@ -63,18 +63,13 @@ alias llaves='keepassxc'
 alias biblioteca='clementine'
 EOF
 
-##  Deployment Instructions in VirtualBox
-1. Create a new Virtual Machine, setting the Type to **Linux** and Version to **Ubuntu (64-bit)**.
-2. Allocate a minimum of **2 CPU Cores** and **4 GB of RAM**.
-3. **Crucial Step:** Check the **"Skip Unattended Installation"** box.
-4. Under the Storage tab, mount the custom `IAAdis-desktop-amd64.iso` file onto the Virtual Optical Drive.
-5. *(Troubleshooting)* If you encounter a black screen or video freezing on startup, change the Graphics Controller to **`VBoxSVGA`** and max out Video Memory to **128 MB**.
-6. Fire up the VM. The system will boot straight into your customized **Live OS** desktop environment.
+#### VirtualBOX with IAA distro
 
+1. Create a new virtual machine with the type set to **Linux** and version to **Ubuntu (64-bit)**.
+2. In the hardware section, allocate at least **2 CPU Cores** and **4 GB of RAM**.
+3. **Important!** Check the box **"Skip Unattended Installation"**.
+4. In the Storage section, mount the `IAAdis-desktop-amd64.iso` file into the virtual optical drive.
+5. *(Optional)* If you experience screen flickering or a black screen, change the graphics controller to `VBoxSVGA` under the Display tab and allocate 128 MB of video memory.
+6. Start the virtual machine. The system will boot directly into the customized **Live OS** environment.
 
-
-
-
-
----
-
+![alt text](<Captura de pantalla 2026-06-21 152640.png>)
