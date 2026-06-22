@@ -5,6 +5,7 @@ To stand up the reproducible Docker build environment and produce the kernel, ru
 
 `docker run --rm -v "$(pwd):/root/env" buildenv --> make build-x86_64`
 `qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso`
-
+![alt text](image-1.png)
+![alt text](image.png)
 ## Demonstration Video
 https://drive.google.com/drive/folders/1fsqrKYIJzeO4xMnkBvbKN26bZEhesbWh?usp=drive_link
