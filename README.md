@@ -263,3 +263,5 @@ This information is valuable because it allows a security analyst to:
 The Black Hat Bash laboratory was successfully deployed using Docker on Debian 13. All eight containers were operational, both required networks were created correctly, and access to a target machine was verified. A reconnaissance scan using Nmap successfully identified an active web service and its underlying technologies, demonstrating the effectiveness of basic network enumeration techniques.
 
 
+![alt text](image.png)
+![alt text](image2.png)
